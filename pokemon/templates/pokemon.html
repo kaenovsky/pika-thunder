@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Pokemon Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            font-size: .5rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>{{ pokemon_name }}</h1>
+        <!-- here comes the img -->
+    </main>
+    
+    <script>
+        const baseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+        const body = document.querySelector('body');
+        const main = document.querySelector('main');
+        const num = "{{ pokemon_number }}";
+        const bg = "{{ bg }}";
+        const newImg = document.createElement('img');
+        newImg.src = `${baseURL}${num}.png`;
+        main.appendChild(newImg);
+        body.style.backgroundColor = bg;
+    </script>
+    
+</body>
+</html>

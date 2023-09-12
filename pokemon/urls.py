@@ -16,11 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pokemon.views import pikachu, charmander, bulbasaur
+from pokemon.views import pokemon
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pikachu/', pikachu),
-    path('charmander/', charmander),
-    path('bulbasaur/', bulbasaur),
+    path('pokemon/<name>', pokemon),
 ]
